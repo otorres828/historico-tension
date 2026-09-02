@@ -12,18 +12,17 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "sql.js": "latest",
+    "@libsql/client": "^0.18.0",
     "bcryptjs": "latest",
+    "exceljs": "latest",
     "jspdf": "latest",
     "jspdf-autotable": "latest",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "exceljs": "latest"
+    "react-dom": "latest"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "latest",
-    "@types/sql.js": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
