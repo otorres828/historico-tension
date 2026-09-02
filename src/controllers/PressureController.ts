@@ -30,7 +30,7 @@ export class PressureController {
       );
     }
 
-    const pressures = listPressures(
+    const pressures = await listPressures(
       user.id,
       from || undefined,
       to || undefined,
@@ -53,7 +53,7 @@ export class PressureController {
       return NextResponse.json({ error: result.error }, { status: 400 });
     }
 
-    saveReading(user.id, result.data);
+    await saveReading(user.id, result.data);
 
     return NextResponse.json({ ok: true }, { status: 201 });
   }
@@ -80,7 +80,7 @@ export class PressureController {
       return NextResponse.json({ error: "Datos inválidos." }, { status: 400 });
     }
 
-    const deleted = deleteReading(
+    const deleted = await deleteReading(
       user.id,
       parameters.date,
       parameters.shift,

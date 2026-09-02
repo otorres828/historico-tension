@@ -46,7 +46,7 @@ export async function getCurrentUser() {
       expires: number;
     };
     if (value.expires < Date.now()) return null;
-    const user = findUserById(value.userId);
+    const user = await findUserById(value.userId);
     return user ? { id: user.id, name: user.name, email: user.email } : null;
   } catch {
     return null;

@@ -40,7 +40,7 @@ export class AuthController {
         );
       }
 
-      if (findUserByEmail(email)) {
+      if (await findUserByEmail(email)) {
         return NextResponse.json(
           { error: "Ya existe una cuenta con ese correo." },
           { status: 409 },
@@ -48,7 +48,7 @@ export class AuthController {
       }
 
       const hashedPassword = await bcrypt.hash(password, 12);
-      const userId = createUser(name, email, hashedPassword);
+      const userId = await createUser(name, email, hashedPassword);
       await createSession(userId);
 
       return NextResponse.json({ ok: true }, { status: 201 });
@@ -66,7 +66,7 @@ export class AuthController {
       const email =
         typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
       const password = typeof body.password === "string" ? body.password : "";
-      const user = findUserByEmail(email);
+      const user = await findUserByEmail(email);
       const validPassword =
         user && (await bcrypt.compare(password, user.password));
 
