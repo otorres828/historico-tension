@@ -6,6 +6,7 @@ import type { PressureDay, ReadingInput, Slot } from "./types";
 
 const remoteUrl = process.env.TURSO_DATABASE_URL;
 const localPath = path.resolve(
+  /* turbopackIgnore: true */
   process.env.DATABASE_PATH ||
     path.join(process.cwd(), "data", "tensiometro.db"),
 );
@@ -70,7 +71,7 @@ export async function findUserByEmail(email: string) {
     args: [email],
   });
 
-  return result.rows[0] as UserRow | undefined;
+  return toUser(result.rows[0]);
 }
 
 export async function findUserById(id: number) {
@@ -81,7 +82,7 @@ export async function findUserById(id: number) {
     args: [id],
   });
 
-  return result.rows[0] as UserRow | undefined;
+  return toUser(result.rows[0]);
 }
 
 export async function createUser(
@@ -196,6 +197,19 @@ function toPressureDay(row: Row): PressureDay {
       left_arm: toSlot(row, "left_arm_afternoon"),
       right_arm: toSlot(row, "right_arm_afternoon"),
     },
+  };
+}
+
+function toUser(row: Row | undefined): UserRow | undefined {
+  if (!row) {
+    return undefined;
+  }
+
+  return {
+    id: Number(row.id),
+    name: String(row.name),
+    email: String(row.email),
+    password: String(row.password),
   };
 }
 
