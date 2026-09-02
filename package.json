@@ -1,0 +1,40 @@
+{
+  "name": "tensiometro",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "format": "prettier --write src",
+    "format:check": "prettier --check src",
+    "start": "next start",
+    "lint": "eslint .",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "sql.js": "latest",
+    "bcryptjs": "latest",
+    "jspdf": "latest",
+    "jspdf-autotable": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "exceljs": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "latest",
+    "@types/sql.js": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "prettier": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest",
+    "vitest": "3.2.4"
+  },
+  "overrides": {
+    "uuid": "^11.1.1"
+  }
+}
