@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { FaEdit, FaTrash } from "react-icons/fa";
 import type { PressureDay, ReadingInput, Slot } from "@/lib/types";
 import ReadingModal from "./ReadingModal";
 type Props = { user: { id: number; name: string; email: string } };
@@ -214,7 +215,7 @@ export default function Dashboard({ user }: Props) {
           </button>
         </div>
         <section className="mb-5 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_auto_auto_auto]">
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-[1fr_1fr_auto_auto_auto]">
             <label className="text-xs font-bold uppercase tracking-wide text-slate-500">
               Desde
               <input
@@ -235,7 +236,7 @@ export default function Dashboard({ user }: Props) {
             </label>
             <button
               onClick={load}
-              className="self-end rounded-lg border border-slate-200 px-4 py-2.5 text-sm font-bold text-slate-700 hover:bg-slate-50"
+              className="col-span-2 self-end rounded-lg border border-slate-200 px-4 py-2.5 text-sm font-bold text-slate-700 hover:bg-slate-50 lg:col-span-1"
             >
               Filtrar
             </button>
@@ -341,12 +342,9 @@ export default function Dashboard({ user }: Props) {
                           key={`${shift}-${arm}`}
                           className={`px-4 py-4 ${i === 1 ? "border-r border-slate-100" : ""}`}
                         >
-                          <button
-                            onClick={() => edit(row.date, shift, arm, value)}
-                            className="group w-full rounded-lg p-2 text-left hover:bg-teal-50"
-                          >
-                            {value ? (
-                              <>
+                          {value ? (
+                            <div className="flex items-center justify-between gap-3 rounded-lg p-2 hover:bg-slate-50">
+                              <div>
                                 <span className="block text-lg font-bold text-slate-900">
                                   <span className="text-teal-600">
                                     {value.sys}
@@ -354,22 +352,38 @@ export default function Dashboard({ user }: Props) {
                                   / {value.dia}
                                 </span>
                                 <span className="text-xs text-slate-400">
-                                  {displayTime(value.time)} · editar
+                                  {displayTime(value.time)}
                                 </span>
-                              </>
-                            ) : (
+                              </div>
+                              <div className="flex items-center gap-1">
+                                <button
+                                  onClick={() =>
+                                    edit(row.date, shift, arm, value)
+                                  }
+                                  aria-label={`Editar ${labels[shift]} ${labels[arm]}`}
+                                  title="Editar"
+                                  className="focus-ring grid size-9 place-items-center rounded-lg text-emerald-600 transition hover:bg-emerald-50 hover:text-emerald-700"
+                                >
+                                  <FaEdit aria-hidden="true" />
+                                </button>
+                                <button
+                                  onClick={() => remove(row.date, shift, arm)}
+                                  aria-label={`Eliminar ${labels[shift]} ${labels[arm]}`}
+                                  title="Eliminar"
+                                  className="focus-ring grid size-9 place-items-center rounded-lg text-red-600 transition hover:bg-red-50 hover:text-red-700"
+                                >
+                                  <FaTrash aria-hidden="true" />
+                                </button>
+                              </div>
+                            </div>
+                          ) : (
+                            <button
+                              onClick={() => edit(row.date, shift, arm, value)}
+                              className="group w-full rounded-lg p-2 text-left hover:bg-teal-50"
+                            >
                               <span className="text-sm text-slate-300 group-hover:text-teal-500">
                                 ＋ Agregar
                               </span>
-                            )}
-                          </button>
-                          {value && (
-                            <button
-                              onClick={() => remove(row.date, shift, arm)}
-                              aria-label={`Eliminar ${labels[shift]} ${labels[arm]}`}
-                              className="ml-2 text-xs text-slate-300 hover:text-red-500"
-                            >
-                              Eliminar
                             </button>
                           )}
                         </td>

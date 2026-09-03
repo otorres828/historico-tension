@@ -1,0 +1,1034 @@
+{
+    "Result": {
+        "Success": true
+    },
+    "LocationList": [
+        {
+            "LocationCode": "1691450",
+            "EquivalentCode": "131",
+            "Shortname": "Estafeta Uruguay",
+            "OwnerCode": "EME",
+            "OwnerName": "Estafeta Mexicana",
+            "LocationTypeCode": "PDV",
+            "TypeLocationName": "Sucursal Estafeta",
+            "SpaceOwnerName": "Estafeta",
+            "Address": "Republica De Uruguay 34 , Centro (Area 1), Cuauhtemoc, Ciudad de Mexico, 06000",
+            "RoadTypeCode": "C",
+            "RoadTypeAbbName": "C",
+            "RoadName": "Republica De Uruguay",
+            "BetweenRoadName1": "Bolivar",
+            "BetweenRoadName2": "Lazaro Cardenas",
+            "ExternalNumber": "34",
+            "SettlementTypeAbbName": "Col",
+            "SettlementName": "Centro (Area 1)",
+            "CountryName": "Mexico",
+            "TownshipName": "Cuauhtemoc",
+            "AddressReference": "Lazaro Cardenas",
+            "Latitude": "19.430950",
+            "Longitude": "-99.13841",
+            "Schedule": {
+                "MFWorkSchedule": "09:00 - 20:00",
+                "MFLunchSchedule": "00:00 - 00:00",
+                "SatWorkSchedule": "10:00 - 14:00",
+                "SatLunchSchedule": "00:00 - 00:00",
+                "SunWorkSchedule": "00:00 - 00:00",
+                "SunLunchSchedule": "00:00 - 00:00"
+            },
+            "Telephone": "8003782338",
+            "IsParking": false,
+            "IsHandicapHandling": false,
+            "IsCOD": true,
+            "DistanceFromSearchPoint": "0",
+            "IsActive": true,
+            "AddressDetail": {
+                "Address1": "Republica De Uruguay 34",
+                "Neighborhood": "Centro (Area 1)",
+                "City": "Cuauhtemoc",
+                "State": "Ciudad de Mexico",
+                "ZipCode": "06000"
+            },
+            "ActivityType": [
+                {
+                    "Code": "OCURR",
+                    "Name": "Entrega a Ocurre"
+                },
+                {
+                    "Code": "RECO",
+                    "Name": "Recolecciones"
+                },
+                {
+                    "Code": "VSERV",
+                    "Name": "Venta de Servicios"
+                }
+            ],
+            "OperationSchedule": [
+                {
+                    "Weekday": "Domingo",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Lunes",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "20:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Martes",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "20:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Miércoles",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "20:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Jueves",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "20:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Viernes",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "20:00",
+                    "StartHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Sábado",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "14:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                }
+            ]
+        },
+        {
+            "LocationCode": "3414051",
+            "EquivalentCode": "INB",
+            "Shortname": "OXXO Centro MEX",
+            "OwnerCode": "OXXO",
+            "OwnerName": "Oxxo",
+            "LocationTypeCode": "ASOCTDA",
+            "TypeLocationName": "Tienda de Conveniencia",
+            "SpaceOwnerName": "OXXO",
+            "Address": "2024-09-16 , Centro (Area 8), CUAUHTEMOC, Ciudad de Mexico, 06080",
+            "RoadTypeCode": "C",
+            "RoadTypeAbbName": "C",
+            "RoadName": "2024-09-16",
+            "ExternalNumber": "39",
+            "SettlementTypeAbbName": "Col",
+            "SettlementName": "Centro (Area 8)",
+            "CountryName": "Mexico",
+            "TownshipName": "CUAUHTEMOC",
+            "Latitude": "19.43234712",
+            "Longitude": "-99.13816455",
+            "Schedule": {
+                "MFWorkSchedule": "07:00 - 20:00",
+                "MFLunchSchedule": "00:00 - 00:00",
+                "SatWorkSchedule": "07:00 - 20:00",
+                "SatLunchSchedule": "00:00 - 00:00",
+                "SunWorkSchedule": "07:00 - 20:00",
+                "SunLunchSchedule": "00:00 - 00:00"
+            },
+            "Telephone": "5552708300",
+            "IsParking": false,
+            "IsHandicapHandling": false,
+            "IsCOD": false,
+            "DistanceFromSearchPoint": "0.156790742009738",
+            "IsActive": true,
+            "AddressDetail": {
+                "Address1": "2024-09-16",
+                "Neighborhood": "Centro (Area 8)",
+                "City": "CUAUHTEMOC",
+                "State": "Ciudad de Mexico",
+                "ZipCode": "06080"
+            },
+            "ActivityType": [
+                {
+                    "Code": "OCURR",
+                    "Name": "Entrega a Ocurre"
+                }
+            ],
+            "OperationSchedule": [
+                {
+                    "Weekday": "Domingo",
+                    "StartHourDay": "07:00",
+                    "FinishHourDay": "20:00"
+                },
+                {
+                    "Weekday": "Lunes",
+                    "StartHourDay": "07:00",
+                    "FinishHourDay": "20:00"
+                },
+                {
+                    "Weekday": "Martes",
+                    "StartHourDay": "07:00",
+                    "FinishHourDay": "20:00"
+                },
+                {
+                    "Weekday": "Miércoles",
+                    "StartHourDay": "07:00",
+                    "FinishHourDay": "20:00"
+                },
+                {
+                    "Weekday": "Jueves",
+                    "StartHourDay": "07:00",
+                    "FinishHourDay": "20:00"
+                },
+                {
+                    "Weekday": "Viernes",
+                    "StartHourDay": "07:00",
+                    "FinishHourDay": "20:00"
+                },
+                {
+                    "Weekday": "Sábado",
+                    "StartHourDay": "07:00",
+                    "FinishHourDay": "20:00"
+                }
+            ]
+        },
+        {
+            "LocationCode": "1690902",
+            "EquivalentCode": "A0U",
+            "Shortname": "Concesionarios Centro",
+            "OwnerCode": "CON",
+            "OwnerName": "Concesionarios",
+            "LocationTypeCode": "PDVC",
+            "TypeLocationName": "Concesionario Estafeta (CA)",
+            "SpaceOwnerName": "Concesionarios",
+            "Address": "Republica De Uruguay 17 41, Centro (Area 1), Cuauhtemoc, Ciudad de Mexico, 06000",
+            "RoadTypeCode": "C",
+            "RoadTypeAbbName": "C",
+            "RoadName": "Republica De Uruguay",
+            "InternalNumber": "41",
+            "ExternalNumber": "17",
+            "SettlementTypeAbbName": "Col",
+            "SettlementName": "Centro (Area 1)",
+            "CountryName": "Mexico",
+            "TownshipName": "Cuauhtemoc",
+            "Latitude": "19.4310299",
+            "Longitude": "-99.1402077",
+            "Schedule": {
+                "MFWorkSchedule": "10:00 - 00:00",
+                "MFLunchSchedule": "00:00 - 00:00",
+                "SatWorkSchedule": "09:00 - 14:00",
+                "SatLunchSchedule": "00:00 - 00:00",
+                "SunWorkSchedule": "00:00 - 00:00",
+                "SunLunchSchedule": "00:00 - 00:00"
+            },
+            "Telephone": "8003782338",
+            "IsParking": false,
+            "IsHandicapHandling": false,
+            "IsCOD": false,
+            "DistanceFromSearchPoint": "0.188997858420092",
+            "IsActive": true,
+            "AddressDetail": {
+                "Address1": "Republica De Uruguay 17",
+                "Address2": "41",
+                "Neighborhood": "Centro (Area 1)",
+                "City": "Cuauhtemoc",
+                "State": "Ciudad de Mexico",
+                "ZipCode": "06000"
+            },
+            "ActivityType": [
+                {
+                    "Code": "VSERV",
+                    "Name": "Venta de Servicios"
+                }
+            ],
+            "OperationSchedule": [
+                {
+                    "Weekday": "Domingo",
+                    "StartHourDay": "00:00",
+                    "FinishHourDay": "00:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Lunes",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "00:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Martes",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Miércoles",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Jueves",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Viernes",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Sábado",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "14:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                }
+            ]
+        },
+        {
+            "LocationCode": "1693650",
+            "EquivalentCode": "IV8",
+            "Shortname": "Seven Eleven 16 SEPT E ISABEL ",
+            "OwnerCode": "S11",
+            "OwnerName": "Seven Eleven",
+            "LocationTypeCode": "ASOCTDA",
+            "TypeLocationName": "Tienda de Conveniencia",
+            "SpaceOwnerName": "Seven Eleven",
+            "Address": "16 de Septiembre 53 , Centro (Area 1), Cuauhtemoc, Ciudad de Mexico, 06000",
+            "RoadTypeCode": "C",
+            "RoadTypeAbbName": "C",
+            "RoadName": "16 de Septiembre",
+            "ExternalNumber": "53",
+            "SettlementTypeAbbName": "Col",
+            "SettlementName": "Centro (Area 1)",
+            "CountryName": "Mexico",
+            "TownshipName": "Cuauhtemoc",
+            "Latitude": "19.4322359",
+            "Longitude": "-99.1372171",
+            "Schedule": {
+                "MFWorkSchedule": "08:00 - 00:00",
+                "MFLunchSchedule": "00:00 - 00:00",
+                "SatWorkSchedule": "08:00 - 22:00",
+                "SatLunchSchedule": "00:00 - 00:00",
+                "SunWorkSchedule": "08:00 - 22:00",
+                "SunLunchSchedule": "00:00 - 00:00"
+            },
+            "Telephone": "5552708300",
+            "IsParking": true,
+            "IsHandicapHandling": true,
+            "IsCOD": false,
+            "DistanceFromSearchPoint": "0.189621254343113",
+            "IsActive": true,
+            "AddressDetail": {
+                "Address1": "16 de Septiembre 53",
+                "Neighborhood": "Centro (Area 1)",
+                "City": "Cuauhtemoc",
+                "State": "Ciudad de Mexico",
+                "ZipCode": "06000"
+            },
+            "ActivityType": [
+                {
+                    "Code": "OCURR",
+                    "Name": "Entrega a Ocurre"
+                }
+            ],
+            "OperationSchedule": [
+                {
+                    "Weekday": "Domingo",
+                    "StartHourDay": "08:00",
+                    "FinishHourDay": "22:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Lunes",
+                    "StartHourDay": "08:00",
+                    "FinishHourDay": "00:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Martes",
+                    "StartHourDay": "08:00",
+                    "FinishHourDay": "22:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Miércoles",
+                    "StartHourDay": "08:00",
+                    "FinishHourDay": "22:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Jueves",
+                    "StartHourDay": "08:00",
+                    "FinishHourDay": "22:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Viernes",
+                    "StartHourDay": "08:00",
+                    "FinishHourDay": "22:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Sábado",
+                    "StartHourDay": "08:00",
+                    "FinishHourDay": "22:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                }
+            ]
+        },
+        {
+            "LocationCode": "1691166",
+            "EquivalentCode": "EK8",
+            "Shortname": "Mail Boxes ETC Eje Central LC",
+            "OwnerCode": "MBE",
+            "OwnerName": "Mail Boxes ETC.",
+            "LocationTypeCode": "PDVC",
+            "TypeLocationName": "Concesionario Estafeta (CA)",
+            "SpaceOwnerName": "Mail Boxes ETC",
+            "Address": "Lazaro Cardenas Eje Central 55 Loc. D Bis, Centro (Area 5), Cuauhtemoc, Ciudad de Mexico, 06050",
+            "RoadTypeCode": "Av",
+            "RoadTypeAbbName": "Av",
+            "RoadName": "Lazaro Cardenas Eje Central",
+            "InternalNumber": "Loc. D Bis",
+            "ExternalNumber": "55",
+            "SettlementTypeAbbName": "Col",
+            "SettlementName": "Centro (Area 5)",
+            "CountryName": "Mexico",
+            "TownshipName": "Cuauhtemoc",
+            "Latitude": "19.4307349",
+            "Longitude": "-99.1414188",
+            "Schedule": {
+                "MFWorkSchedule": "09:00 - 00:00",
+                "MFLunchSchedule": "00:00 - 00:00",
+                "SatWorkSchedule": "09:00 - 14:00",
+                "SatLunchSchedule": "00:00 - 00:00",
+                "SunWorkSchedule": "00:00 - 00:00",
+                "SunLunchSchedule": "00:00 - 00:00"
+            },
+            "Telephone": "8003782338",
+            "IsParking": false,
+            "IsHandicapHandling": false,
+            "IsCOD": false,
+            "DistanceFromSearchPoint": "0.316874209864504",
+            "IsActive": true,
+            "AddressDetail": {
+                "Address1": "Lazaro Cardenas Eje Central 55",
+                "Address2": "Loc. D Bis",
+                "Neighborhood": "Centro (Area 5)",
+                "City": "Cuauhtemoc",
+                "State": "Ciudad de Mexico",
+                "ZipCode": "06050"
+            },
+            "ActivityType": [
+                {
+                    "Code": "VSERV",
+                    "Name": "Venta de Servicios"
+                }
+            ],
+            "OperationSchedule": [
+                {
+                    "Weekday": "Domingo",
+                    "StartHourDay": "00:00",
+                    "FinishHourDay": "00:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Lunes",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "00:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Martes",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "19:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Miércoles",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "19:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Jueves",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "19:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Viernes",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "19:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Sábado",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "14:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                }
+            ]
+        },
+        {
+            "LocationCode": "1691669",
+            "EquivalentCode": "81A",
+            "Shortname": "Estafeta Donceles",
+            "OwnerCode": "EME",
+            "OwnerName": "Estafeta Mexicana",
+            "LocationTypeCode": "PDV",
+            "TypeLocationName": "Sucursal Estafeta",
+            "SpaceOwnerName": "Estafeta",
+            "Address": "Heroes Del 57 4 , Centro (Area 2), Cuauhtemoc, Ciudad de Mexico, 06010",
+            "RoadTypeCode": "Cjon",
+            "RoadTypeAbbName": "Cjon",
+            "RoadName": "Heroes Del 57",
+            "BetweenRoadName1": "Donceles",
+            "BetweenRoadName2": "Eje Central L. Cardenas",
+            "ExternalNumber": "4",
+            "SettlementTypeAbbName": "Col",
+            "SettlementName": "Centro (Area 2)",
+            "CountryName": "Mexico",
+            "TownshipName": "Cuauhtemoc",
+            "AddressReference": "Eje Central L. Cardenas",
+            "Latitude": "19.436828",
+            "Longitude": "-99.139288",
+            "Schedule": {
+                "MFWorkSchedule": "10:00 - 18:00",
+                "MFLunchSchedule": "00:00 - 00:00",
+                "SatWorkSchedule": "10:00 - 14:00",
+                "SatLunchSchedule": "00:00 - 00:00",
+                "SunWorkSchedule": "00:00 - 00:00",
+                "SunLunchSchedule": "00:00 - 00:00"
+            },
+            "Telephone": "8003782338",
+            "IsParking": false,
+            "IsHandicapHandling": false,
+            "IsCOD": true,
+            "DistanceFromSearchPoint": "0.657179169849597",
+            "IsActive": true,
+            "AddressDetail": {
+                "Address1": "Heroes Del 57 4",
+                "Neighborhood": "Centro (Area 2)",
+                "City": "Cuauhtemoc",
+                "State": "Ciudad de Mexico",
+                "ZipCode": "06010"
+            },
+            "ActivityType": [
+                {
+                    "Code": "OCURR",
+                    "Name": "Entrega a Ocurre"
+                },
+                {
+                    "Code": "RECO",
+                    "Name": "Recolecciones"
+                },
+                {
+                    "Code": "VSERV",
+                    "Name": "Venta de Servicios"
+                }
+            ],
+            "OperationSchedule": [
+                {
+                    "Weekday": "Domingo",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Lunes",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Martes",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Miércoles",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Jueves",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Viernes",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Sábado",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "14:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                }
+            ]
+        },
+        {
+            "LocationCode": "1691185",
+            "EquivalentCode": "F09",
+            "Shortname": "Pakmail Republica de Cuba",
+            "OwnerCode": "PAKMAIL",
+            "OwnerName": "Pakmail",
+            "LocationTypeCode": "PDVC",
+            "TypeLocationName": "Concesionario Estafeta (CA)",
+            "SpaceOwnerName": "Pakmail",
+            "Address": "Republica De Cuba 39 5, Centro (Area 1), Cuauhtemoc, Ciudad de Mexico, 06000",
+            "RoadTypeCode": "C",
+            "RoadTypeAbbName": "C",
+            "RoadName": "Republica De Cuba",
+            "InternalNumber": "5",
+            "ExternalNumber": "39",
+            "SettlementTypeAbbName": "Col",
+            "SettlementName": "Centro (Area 1)",
+            "CountryName": "Mexico",
+            "TownshipName": "Cuauhtemoc",
+            "Latitude": "19.4373826",
+            "Longitude": "-99.1375594",
+            "Schedule": {
+                "MFWorkSchedule": "10:00 - 00:00",
+                "MFLunchSchedule": "00:00 - 00:00",
+                "SatWorkSchedule": "10:00 - 14:00",
+                "SatLunchSchedule": "00:00 - 00:00",
+                "SunWorkSchedule": "00:00 - 00:00",
+                "SunLunchSchedule": "00:00 - 00:00"
+            },
+            "Telephone": "8003782338",
+            "IsParking": false,
+            "IsHandicapHandling": false,
+            "IsCOD": false,
+            "DistanceFromSearchPoint": "0.71765247496117",
+            "IsActive": true,
+            "AddressDetail": {
+                "Address1": "Republica De Cuba 39",
+                "Address2": "5",
+                "Neighborhood": "Centro (Area 1)",
+                "City": "Cuauhtemoc",
+                "State": "Ciudad de Mexico",
+                "ZipCode": "06000"
+            },
+            "ActivityType": [
+                {
+                    "Code": "VSERV",
+                    "Name": "Venta de Servicios"
+                }
+            ],
+            "OperationSchedule": [
+                {
+                    "Weekday": "Domingo",
+                    "StartHourDay": "00:00",
+                    "FinishHourDay": "00:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Lunes",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "00:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Martes",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Miércoles",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Jueves",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Viernes",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Sábado",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "14:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                }
+            ]
+        },
+        {
+            "LocationCode": "1691591",
+            "EquivalentCode": "560",
+            "Shortname": "Estafeta Cuba",
+            "OwnerCode": "EME",
+            "OwnerName": "Estafeta Mexicana",
+            "LocationTypeCode": "PDV",
+            "TypeLocationName": "Sucursal Estafeta",
+            "SpaceOwnerName": "Estafeta",
+            "Address": "Republica De Cuba 54 , Centro (Area 2), Cuauhtemoc, Ciudad de Mexico, 06010",
+            "RoadTypeCode": "C",
+            "RoadTypeAbbName": "C",
+            "RoadName": "Republica De Cuba",
+            "BetweenRoadName1": "Republica de Chile",
+            "BetweenRoadName2": "Allende",
+            "ExternalNumber": "54",
+            "SettlementTypeAbbName": "Col",
+            "SettlementName": "Centro (Area 2)",
+            "CountryName": "Mexico",
+            "TownshipName": "Cuauhtemoc",
+            "AddressReference": "Allende",
+            "Latitude": "19.437262",
+            "Longitude": "-99.136799",
+            "Schedule": {
+                "MFWorkSchedule": "09:00 - 19:00",
+                "MFLunchSchedule": "00:00 - 00:00",
+                "SatWorkSchedule": "10:00 - 14:00",
+                "SatLunchSchedule": "00:00 - 00:00",
+                "SunWorkSchedule": "00:00 - 00:00",
+                "SunLunchSchedule": "00:00 - 00:00"
+            },
+            "Telephone": "8003782338",
+            "IsParking": false,
+            "IsHandicapHandling": false,
+            "IsCOD": true,
+            "DistanceFromSearchPoint": "0.718911488879874",
+            "IsActive": true,
+            "AddressDetail": {
+                "Address1": "Republica De Cuba 54",
+                "Neighborhood": "Centro (Area 2)",
+                "City": "Cuauhtemoc",
+                "State": "Ciudad de Mexico",
+                "ZipCode": "06010"
+            },
+            "ActivityType": [
+                {
+                    "Code": "OCURR",
+                    "Name": "Entrega a Ocurre"
+                },
+                {
+                    "Code": "RECO",
+                    "Name": "Recolecciones"
+                },
+                {
+                    "Code": "VSERV",
+                    "Name": "Venta de Servicios"
+                }
+            ],
+            "OperationSchedule": [
+                {
+                    "Weekday": "Domingo",
+                    "StartHourDay": "00:00",
+                    "FinishHourDay": "00:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Lunes",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "19:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Martes",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "19:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Miércoles",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "19:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Jueves",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "19:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Viernes",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "19:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Sábado",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "14:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                }
+            ]
+        },
+        {
+            "LocationCode": "1692851",
+            "EquivalentCode": "ISO",
+            "Shortname": "Gamuza",
+            "OwnerCode": "PDC",
+            "OwnerName": "Punto de Contacto",
+            "LocationTypeCode": "ASOCPDC",
+            "TypeLocationName": "Punto de Contacto",
+            "SpaceOwnerName": "Gamuza",
+            "Address": "Fray Servando Teresa De Mier 1 , Centro (Area 8), Cuauhtemoc, Ciudad de Mexico, 06080",
+            "RoadTypeCode": "Av",
+            "RoadTypeAbbName": "Av",
+            "RoadName": "Fray Servando Teresa De Mier",
+            "BetweenRoadName1": "Isabel La Catolica",
+            "BetweenRoadName2": "6 De Febrero",
+            "ExternalNumber": "160",
+            "SettlementTypeAbbName": "Col",
+            "SettlementName": "Centro (Area 8)",
+            "CountryName": "Mexico",
+            "TownshipName": "Cuauhtemoc",
+            "AddressReference": "6 De Febrero",
+            "Latitude": "19.4241904",
+            "Longitude": "-99.1357563",
+            "Schedule": {
+                "MFWorkSchedule": "10:00 - 18:00",
+                "MFLunchSchedule": "00:00 - 00:00",
+                "SatWorkSchedule": "10:00 - 15:00",
+                "SatLunchSchedule": "00:00 - 00:00",
+                "SunWorkSchedule": "00:00 - 00:00",
+                "SunLunchSchedule": "00:00 - 00:00"
+            },
+            "Telephone": "5552708300",
+            "IsParking": false,
+            "IsHandicapHandling": false,
+            "IsCOD": false,
+            "DistanceFromSearchPoint": "0.798483383876242",
+            "IsActive": true,
+            "AddressDetail": {
+                "Address1": "Fray Servando Teresa De Mier 1",
+                "Neighborhood": "Centro (Area 8)",
+                "City": "Cuauhtemoc",
+                "State": "Ciudad de Mexico",
+                "ZipCode": "06080"
+            },
+            "ActivityType": [
+                {
+                    "Code": "OCURR",
+                    "Name": "Entrega a Ocurre"
+                },
+                {
+                    "Code": "RECO",
+                    "Name": "Recolecciones"
+                }
+            ],
+            "OperationSchedule": [
+                {
+                    "Weekday": "Domingo",
+                    "StartHourDay": "00:00",
+                    "FinishHourDay": "00:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Lunes",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Martes",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Miércoles",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Jueves",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Viernes",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "18:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Sábado",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "15:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                }
+            ]
+        },
+        {
+            "LocationCode": "1691427",
+            "EquivalentCode": "08F",
+            "Shortname": "Estafeta Doctores",
+            "OwnerCode": "EME",
+            "OwnerName": "Estafeta Mexicana",
+            "LocationTypeCode": "PDV",
+            "TypeLocationName": "Sucursal Estafeta",
+            "SpaceOwnerName": "Estafeta",
+            "Address": "Rio De La Loza 13 , Doctores, Cuauhtemoc, Ciudad de Mexico, 06720",
+            "RoadTypeCode": "Av",
+            "RoadTypeAbbName": "Av",
+            "RoadName": "Rio De La Loza",
+            "BetweenRoadName1": "Dr Rio de la Loza",
+            "BetweenRoadName2": "Av Arcos de Belen",
+            "ExternalNumber": "13",
+            "SettlementTypeAbbName": "Col",
+            "SettlementName": "Doctores",
+            "CountryName": "Mexico",
+            "TownshipName": "Cuauhtemoc",
+            "AddressReference": "Av Arcos de Belen",
+            "Latitude": "19.42508",
+            "Longitude": "-99.14294",
+            "Schedule": {
+                "MFWorkSchedule": "09:00 - 19:00",
+                "MFLunchSchedule": "00:00 - 00:00",
+                "SatWorkSchedule": "10:00 - 14:00",
+                "SatLunchSchedule": "00:00 - 00:00",
+                "SunWorkSchedule": "00:00 - 00:00",
+                "SunLunchSchedule": "00:00 - 00:00"
+            },
+            "Telephone": "8003782338",
+            "IsParking": false,
+            "IsHandicapHandling": false,
+            "IsCOD": true,
+            "DistanceFromSearchPoint": "0.805331741058177",
+            "IsActive": true,
+            "AddressDetail": {
+                "Address1": "Rio De La Loza 13",
+                "Neighborhood": "Doctores",
+                "City": "Cuauhtemoc",
+                "State": "Ciudad de Mexico",
+                "ZipCode": "06720"
+            },
+            "ActivityType": [
+                {
+                    "Code": "OCURR",
+                    "Name": "Entrega a Ocurre"
+                },
+                {
+                    "Code": "RECO",
+                    "Name": "Recolecciones"
+                },
+                {
+                    "Code": "VSERV",
+                    "Name": "Venta de Servicios"
+                }
+            ],
+            "OperationSchedule": [
+                {
+                    "Weekday": "Domingo",
+                    "StartHourDay": "00:00",
+                    "FinishHourDay": "00:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Lunes",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "19:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Martes",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "19:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Miércoles",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "19:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Jueves",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "19:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Viernes",
+                    "StartHourDay": "09:00",
+                    "FinishHourDay": "19:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                },
+                {
+                    "Weekday": "Sábado",
+                    "StartHourDay": "10:00",
+                    "FinishHourDay": "14:00",
+                    "StartHourLunchDay": "00:00",
+                    "FinishHourLunchDay": "00:00"
+                }
+            ]
+        }
+    ]
+}

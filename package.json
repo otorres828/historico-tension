@@ -19,7 +19,8 @@
     "jspdf-autotable": "latest",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-icons": "latest"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "latest",
