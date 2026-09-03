@@ -32,6 +32,15 @@ function formatExportDate(value: string) {
   return `${day}-${month}-${year}`;
 }
 
+function createExportFilename(extension: "pdf" | "xlsx") {
+  const now = new Date();
+  const day = String(now.getDate()).padStart(2, "0");
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const random = crypto.randomUUID().slice(0, 8);
+
+  return `historial-presion-${day}-${month}-${random}.${extension}`;
+}
+
 function formatExportSlot(slot: Slot) {
   return slot
     ? `${slot.sys}/${slot.dia} · Pulso: ${slot.pulse ?? "--"} ppm · ${slot.time}`
@@ -147,7 +156,7 @@ export default function Dashboard({ user }: Props) {
         body,
         headStyles: { fillColor: [13, 148, 136] },
       });
-      doc.save("historial-presion.pdf");
+      doc.save(createExportFilename("pdf"));
     } finally {
       setExporting(null);
     }
@@ -189,7 +198,7 @@ export default function Dashboard({ user }: Props) {
       );
       const link = document.createElement("a");
       link.href = url;
-      link.download = "historial-presion.xlsx";
+      link.download = createExportFilename("xlsx");
       link.click();
       URL.revokeObjectURL(url);
     } finally {
