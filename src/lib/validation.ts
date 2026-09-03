@@ -9,6 +9,7 @@ export function validateReading(value: unknown): {
   const b = value as Record<string, unknown>;
   const systolic = Number(b.systolic);
   const diastolic = Number(b.diastolic);
+  const pulse = Number(b.pulse);
   if (
     typeof b.date !== "string" ||
     !datePattern.test(b.date) ||
@@ -27,6 +28,8 @@ export function validateReading(value: unknown): {
     return { error: "La presión diastólica debe estar entre 30 y 200." };
   if (systolic <= diastolic)
     return { error: "La presión sistólica debe ser mayor que la diastólica." };
+  if (!Number.isInteger(pulse) || pulse < 30 || pulse > 250)
+    return { error: "Las pulsaciones deben estar entre 30 y 250." };
   return {
     data: {
       date: b.date,
@@ -35,6 +38,7 @@ export function validateReading(value: unknown): {
       time: b.time,
       systolic,
       diastolic,
+      pulse,
     } as ReadingInput,
   };
 }

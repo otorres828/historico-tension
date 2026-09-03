@@ -148,6 +148,20 @@ export default function ReadingModal({
               className={field}
             />
           </label>
+          <label className="col-span-2 text-sm font-semibold text-slate-700">
+            Pulsaciones{" "}
+            <span className="font-normal text-slate-400">(por minuto)</span>
+            <input
+              name="pulse"
+              type="number"
+              min={30}
+              max={250}
+              required
+              defaultValue={initial?.pulse || 70}
+              inputMode="numeric"
+              className={field}
+            />
+          </label>
           {error && (
             <p
               role="alert"

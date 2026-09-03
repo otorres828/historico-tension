@@ -1,4 +1,9 @@
-export type Slot = { sys: number; dia: number; time: string } | null;
+export type Slot = {
+  sys: number;
+  dia: number;
+  pulse: number | null;
+  time: string;
+} | null;
 export type PressureDay = {
   date: string;
   morning: { left_arm: Slot; right_arm: Slot };
@@ -11,4 +16,5 @@ export type ReadingInput = {
   time: string;
   systolic: number;
   diastolic: number;
+  pulse: number;
 };

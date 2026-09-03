@@ -26,12 +26,20 @@ function displayTime(v: string) {
     minute: "2-digit",
   }).format(new Date(2000, 0, 1, h, m));
 }
+
+function formatExportSlot(slot: Slot) {
+  return slot
+    ? `${slot.sys}/${slot.dia} · ${slot.pulse ?? "--"} ppm · ${slot.time}`
+    : "";
+}
+
 export default function Dashboard({ user }: Props) {
   const [rows, setRows] = useState<PressureDay[]>([]),
     [from, setFrom] = useState(""),
     [to, setTo] = useState(""),
     [loading, setLoading] = useState(true),
     [error, setError] = useState(""),
+    [exporting, setExporting] = useState<"PDF" | "Excel" | null>(null),
     [modal, setModal] = useState<ReadingInput | null | "new">(null);
   const router = useRouter();
   const load = useCallback(async () => {
@@ -65,6 +73,7 @@ export default function Dashboard({ user }: Props) {
             time: value.time,
             systolic: value.sys,
             diastolic: value.dia,
+            pulse: value.pulse || 70,
           }
         : {
             date,
@@ -73,6 +82,7 @@ export default function Dashboard({ user }: Props) {
             time: new Date().toTimeString().slice(0, 5),
             systolic: 120,
             diastolic: 80,
+            pulse: 70,
           },
     );
   }
@@ -93,85 +103,91 @@ export default function Dashboard({ user }: Props) {
     router.refresh();
   }
   async function exportPdf() {
-    const [{ jsPDF }, autoTableModule] = await Promise.all([
-      import("jspdf"),
-      import("jspdf-autotable"),
-    ]);
-    const doc = new jsPDF({ orientation: "landscape" });
-    doc.setFontSize(18);
-    doc.text("Historial de presión arterial", 14, 16);
-    const body = rows.map((r) => [
-      displayDate(r.date),
-      ...(
-        [
-          r.morning.left_arm,
-          r.morning.right_arm,
-          r.afternoon.left_arm,
-          r.afternoon.right_arm,
-        ] as Slot[]
-      ).map((s) => (s ? `${s.sys}/${s.dia}  ${s.time}` : "--")),
-    ]);
-    autoTableModule.default(doc, {
-      startY: 22,
-      head: [
-        [
-          "Fecha",
-          "Mañana · Izq.",
-          "Mañana · Der.",
-          "Tarde · Izq.",
-          "Tarde · Der.",
+    setExporting("PDF");
+
+    try {
+      const [{ jsPDF }, autoTableModule] = await Promise.all([
+        import("jspdf"),
+        import("jspdf-autotable"),
+      ]);
+      const doc = new jsPDF({ orientation: "landscape" });
+      doc.setFontSize(18);
+      doc.text("Historial de presión arterial", 14, 16);
+      const body = rows.map((r) => [
+        displayDate(r.date),
+        ...(
+          [
+            r.morning.left_arm,
+            r.morning.right_arm,
+            r.afternoon.left_arm,
+            r.afternoon.right_arm,
+          ] as Slot[]
+        ).map((s) =>
+          s ? `${s.sys}/${s.dia} · ${s.pulse ?? "--"} ppm · ${s.time}` : "--",
+        ),
+      ]);
+      autoTableModule.default(doc, {
+        startY: 22,
+        head: [
+          [
+            "Fecha",
+            "Mañana · Izq.",
+            "Mañana · Der.",
+            "Tarde · Izq.",
+            "Tarde · Der.",
+          ],
         ],
-      ],
-      body,
-      headStyles: { fillColor: [13, 148, 136] },
-    });
-    doc.save("historial-presion.pdf");
+        body,
+        headStyles: { fillColor: [13, 148, 136] },
+      });
+      doc.save("historial-presion.pdf");
+    } finally {
+      setExporting(null);
+    }
   }
   async function exportExcel() {
-    const ExcelJS = (await import("exceljs")).default;
-    const book = new ExcelJS.Workbook(),
-      sheet = book.addWorksheet("Presiones");
-    sheet.columns = [
-      { header: "Fecha", key: "date", width: 14 },
-      { header: "Mañana - Brazo izquierdo", key: "mil", width: 28 },
-      { header: "Mañana - Brazo derecho", key: "mir", width: 28 },
-      { header: "Tarde - Brazo izquierdo", key: "ail", width: 28 },
-      { header: "Tarde - Brazo derecho", key: "air", width: 28 },
-    ];
-    rows.forEach((r) =>
-      sheet.addRow({
-        date: r.date,
-        mil: r.morning.left_arm
-          ? `${r.morning.left_arm.sys}/${r.morning.left_arm.dia} ${r.morning.left_arm.time}`
-          : "",
-        mir: r.morning.right_arm
-          ? `${r.morning.right_arm.sys}/${r.morning.right_arm.dia} ${r.morning.right_arm.time}`
-          : "",
-        ail: r.afternoon.left_arm
-          ? `${r.afternoon.left_arm.sys}/${r.afternoon.left_arm.dia} ${r.afternoon.left_arm.time}`
-          : "",
-        air: r.afternoon.right_arm
-          ? `${r.afternoon.right_arm.sys}/${r.afternoon.right_arm.dia} ${r.afternoon.right_arm.time}`
-          : "",
-      }),
-    );
-    sheet.getRow(1).font = { bold: true, color: { argb: "FFFFFFFF" } };
-    sheet.getRow(1).fill = {
-      type: "pattern",
-      pattern: "solid",
-      fgColor: { argb: "FF0D9488" },
-    };
-    const buffer = await book.xlsx.writeBuffer();
-    const url = URL.createObjectURL(
-      new Blob([buffer], {
-        type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      }),
-    );
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "historial-presion.xlsx";
-    link.click();
-    URL.revokeObjectURL(url);
+    setExporting("Excel");
+
+    try {
+      const ExcelJS = (await import("exceljs")).default;
+      const book = new ExcelJS.Workbook();
+      const sheet = book.addWorksheet("Presiones");
+      sheet.columns = [
+        { header: "Fecha", key: "date", width: 14 },
+        { header: "Mañana - Brazo izquierdo", key: "mil", width: 32 },
+        { header: "Mañana - Brazo derecho", key: "mir", width: 32 },
+        { header: "Tarde - Brazo izquierdo", key: "ail", width: 32 },
+        { header: "Tarde - Brazo derecho", key: "air", width: 32 },
+      ];
+      rows.forEach((r) =>
+        sheet.addRow({
+          date: r.date,
+          mil: formatExportSlot(r.morning.left_arm),
+          mir: formatExportSlot(r.morning.right_arm),
+          ail: formatExportSlot(r.afternoon.left_arm),
+          air: formatExportSlot(r.afternoon.right_arm),
+        }),
+      );
+      sheet.getRow(1).font = { bold: true, color: { argb: "FFFFFFFF" } };
+      sheet.getRow(1).fill = {
+        type: "pattern",
+        pattern: "solid",
+        fgColor: { argb: "FF0D9488" },
+      };
+      const buffer = await book.xlsx.writeBuffer();
+      const url = URL.createObjectURL(
+        new Blob([buffer], {
+          type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        }),
+      );
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "historial-presion.xlsx";
+      link.click();
+      URL.revokeObjectURL(url);
+    } finally {
+      setExporting(null);
+    }
   }
   return (
     <main className="min-h-screen">
@@ -242,14 +258,14 @@ export default function Dashboard({ user }: Props) {
             </button>
             <button
               onClick={exportPdf}
-              disabled={!rows.length}
+              disabled={!rows.length || Boolean(exporting)}
               className="self-end rounded-lg border border-red-200 bg-red-50 px-4 py-2.5 text-sm font-bold text-red-700 disabled:opacity-40"
             >
               PDF
             </button>
             <button
               onClick={exportExcel}
-              disabled={!rows.length}
+              disabled={!rows.length || Boolean(exporting)}
               className="self-end rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-2.5 text-sm font-bold text-emerald-700 disabled:opacity-40"
             >
               Excel
@@ -354,6 +370,9 @@ export default function Dashboard({ user }: Props) {
                                 <span className="text-xs text-slate-400">
                                   {displayTime(value.time)}
                                 </span>
+                                <span className="mt-1 block text-xs font-semibold text-rose-500">
+                                  ♥ {value.pulse ?? "--"} ppm
+                                </span>
                               </div>
                               <div className="flex items-center gap-1">
                                 <button
@@ -408,6 +427,23 @@ export default function Dashboard({ user }: Props) {
             void load();
           }}
         />
+      )}
+      {exporting && (
+        <div
+          role="status"
+          aria-live="polite"
+          className="fixed inset-0 z-[100] grid place-items-center bg-slate-950/60 px-6 backdrop-blur-sm"
+        >
+          <div className="flex min-w-56 flex-col items-center rounded-2xl bg-white px-8 py-7 text-center shadow-2xl">
+            <div className="size-12 animate-spin rounded-full border-4 border-teal-100 border-t-teal-600" />
+            <p className="mt-4 font-bold text-slate-800">
+              Generando {exporting}…
+            </p>
+            <p className="mt-1 text-sm text-slate-500">
+              Tu descarga estará lista en un momento.
+            </p>
+          </div>
+        </div>
       )}
     </main>
   );
