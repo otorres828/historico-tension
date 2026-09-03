@@ -314,24 +314,24 @@ export default function Dashboard({ user }: Props) {
                   </th>
                   <th
                     colSpan={2}
-                    className="border-r border-slate-700 px-4 py-1.5 text-center text-xs uppercase tracking-wider"
+                    className="border-r border-slate-700 px-4 py-1 text-center text-xs uppercase tracking-wider"
                   >
                     Mañana
                   </th>
                   <th
                     colSpan={2}
-                    className="px-4 py-1.5 text-center text-xs uppercase tracking-wider"
+                    className="px-4 py-1 text-center text-xs uppercase tracking-wider"
                   >
                     Tarde
                   </th>
                 </tr>
                 <tr className="bg-slate-700 text-xs text-slate-200">
-                  <th className="px-4 py-1.5">Brazo izquierdo</th>
-                  <th className="border-r border-slate-600 px-4 py-1.5">
+                  <th className="px-4 py-1">Brazo izquierdo</th>
+                  <th className="border-r border-slate-600 px-4 py-1">
                     Brazo derecho
                   </th>
-                  <th className="px-4 py-1.5">Brazo izquierdo</th>
-                  <th className="px-4 py-1.5">Brazo derecho</th>
+                  <th className="px-4 py-1">Brazo izquierdo</th>
+                  <th className="px-4 py-1">Brazo derecho</th>
                 </tr>
               </thead>
               <tbody>
