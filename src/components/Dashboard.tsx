@@ -294,30 +294,30 @@ export default function Dashboard({ user }: Props) {
                 <tr className="bg-slate-800 text-white">
                   <th
                     rowSpan={2}
-                    className="border-r border-slate-700 px-5 py-4"
+                    className="border-r border-slate-700 px-5 py-2"
                   >
                     Fecha
                   </th>
                   <th
                     colSpan={2}
-                    className="border-r border-slate-700 px-4 py-2 text-center text-xs uppercase tracking-wider"
+                    className="border-r border-slate-700 px-4 py-1.5 text-center text-xs uppercase tracking-wider"
                   >
                     Mañana
                   </th>
                   <th
                     colSpan={2}
-                    className="px-4 py-2 text-center text-xs uppercase tracking-wider"
+                    className="px-4 py-1.5 text-center text-xs uppercase tracking-wider"
                   >
                     Tarde
                   </th>
                 </tr>
                 <tr className="bg-slate-700 text-xs text-slate-200">
-                  <th className="px-4 py-2">Brazo izquierdo</th>
-                  <th className="border-r border-slate-600 px-4 py-2">
+                  <th className="px-4 py-1.5">Brazo izquierdo</th>
+                  <th className="border-r border-slate-600 px-4 py-1.5">
                     Brazo derecho
                   </th>
-                  <th className="px-4 py-2">Brazo izquierdo</th>
-                  <th className="px-4 py-2">Brazo derecho</th>
+                  <th className="px-4 py-1.5">Brazo izquierdo</th>
+                  <th className="px-4 py-1.5">Brazo derecho</th>
                 </tr>
               </thead>
               <tbody>
@@ -345,7 +345,7 @@ export default function Dashboard({ user }: Props) {
                       key={row.date}
                       className="border-t border-slate-100 hover:bg-slate-50"
                     >
-                      <td className="border-r border-slate-100 px-5 py-4 font-bold text-slate-800">
+                      <td className="border-r border-slate-100 px-5 py-2 font-bold text-slate-800">
                         {displayDate(row.date)}
                       </td>
                       {(
@@ -358,10 +358,10 @@ export default function Dashboard({ user }: Props) {
                       ).map(([shift, arm, value], i) => (
                         <td
                           key={`${shift}-${arm}`}
-                          className={`px-4 py-4 ${i === 1 ? "border-r border-slate-100" : ""}`}
+                          className={`px-4 py-2 ${i === 1 ? "border-r border-slate-100" : ""}`}
                         >
                           {value ? (
-                            <div className="flex items-center justify-between gap-3 rounded-lg p-2 hover:bg-slate-50">
+                            <div className="flex items-center justify-between gap-3 rounded-lg px-2 py-1 hover:bg-slate-50">
                               <div className="min-w-0">
                                 <span className="block whitespace-nowrap text-lg font-bold text-slate-900">
                                   <span className="text-teal-600">
@@ -400,7 +400,7 @@ export default function Dashboard({ user }: Props) {
                           ) : (
                             <button
                               onClick={() => edit(row.date, shift, arm, value)}
-                              className="group w-full rounded-lg p-2 text-left hover:bg-teal-50"
+                              className="group w-full rounded-lg px-2 py-1 text-left hover:bg-teal-50"
                             >
                               <span className="text-sm text-slate-300 group-hover:text-teal-500">
                                 ＋ Agregar
