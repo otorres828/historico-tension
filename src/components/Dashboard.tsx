@@ -27,6 +27,11 @@ function displayTime(v: string) {
   }).format(new Date(2000, 0, 1, h, m));
 }
 
+function formatExportDate(value: string) {
+  const [year, month, day] = value.split("-");
+  return `${day}-${month}-${year}`;
+}
+
 function formatExportSlot(slot: Slot) {
   return slot
     ? `${slot.sys}/${slot.dia} · Pulso: ${slot.pulse ?? "--"} ppm · ${slot.time}`
@@ -114,7 +119,7 @@ export default function Dashboard({ user }: Props) {
       doc.setFontSize(18);
       doc.text("Historial de presión arterial", 14, 16);
       const body = rows.map((r) => [
-        displayDate(r.date),
+        formatExportDate(r.date),
         ...(
           [
             r.morning.left_arm,
@@ -163,7 +168,7 @@ export default function Dashboard({ user }: Props) {
       ];
       rows.forEach((r) =>
         sheet.addRow({
-          date: r.date,
+          date: formatExportDate(r.date),
           mil: formatExportSlot(r.morning.left_arm),
           mir: formatExportSlot(r.morning.right_arm),
           ail: formatExportSlot(r.afternoon.left_arm),
