@@ -383,11 +383,11 @@ export default function Dashboard({ user }: Props) {
                                   </span>{" "}
                                   / {value.dia}
                                 </span>
-                                <span className="text-xs text-slate-400">
-                                  {displayTime(value.time)}
-                                </span>
                                 <span className="mt-1 block text-xs font-semibold text-rose-500">
                                   ♥ {value.pulse ?? "--"} ppm
+                                </span>
+                                <span className="text-xs text-slate-400">
+                                  {displayTime(value.time)}
                                 </span>
                               </div>
                               <div className="flex shrink-0 items-center gap-1">
