@@ -29,7 +29,7 @@ function displayTime(v: string) {
 
 function formatExportSlot(slot: Slot) {
   return slot
-    ? `${slot.sys}/${slot.dia} · ${slot.pulse ?? "--"} ppm · ${slot.time}`
+    ? `${slot.sys}/${slot.dia} · Pulso: ${slot.pulse ?? "--"} ppm · ${slot.time}`
     : "";
 }
 
@@ -123,7 +123,9 @@ export default function Dashboard({ user }: Props) {
             r.afternoon.right_arm,
           ] as Slot[]
         ).map((s) =>
-          s ? `${s.sys}/${s.dia} · ${s.pulse ?? "--"} ppm · ${s.time}` : "--",
+          s
+            ? `${s.sys}/${s.dia} · Pulso: ${s.pulse ?? "--"} ppm · ${s.time}`
+            : "--",
         ),
       ]);
       autoTableModule.default(doc, {
@@ -287,7 +289,7 @@ export default function Dashboard({ user }: Props) {
         )}
         <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[900px] border-collapse text-left">
+            <table className="w-full min-w-[1100px] border-collapse text-left">
               <thead>
                 <tr className="bg-slate-800 text-white">
                   <th
@@ -360,8 +362,8 @@ export default function Dashboard({ user }: Props) {
                         >
                           {value ? (
                             <div className="flex items-center justify-between gap-3 rounded-lg p-2 hover:bg-slate-50">
-                              <div>
-                                <span className="block text-lg font-bold text-slate-900">
+                              <div className="min-w-0">
+                                <span className="block whitespace-nowrap text-lg font-bold text-slate-900">
                                   <span className="text-teal-600">
                                     {value.sys}
                                   </span>{" "}
@@ -374,7 +376,7 @@ export default function Dashboard({ user }: Props) {
                                   ♥ {value.pulse ?? "--"} ppm
                                 </span>
                               </div>
-                              <div className="flex items-center gap-1">
+                              <div className="flex shrink-0 items-center gap-1">
                                 <button
                                   onClick={() =>
                                     edit(row.date, shift, arm, value)

